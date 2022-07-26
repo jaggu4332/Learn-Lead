@@ -2,38 +2,39 @@
 using namespace std;
 class employee{
     private:
-    string Name;
-    int Age;
+   string title;
+   string director;
+   int  rating;
+   public:
+   employee(string aTitle,string aDirector,int aRating){
+            setDirector(aDirector);
+            setRating(aRating);
+            seTitle(aTitle);
+   }
 
-    public:
-    void setName(string name){
-               Name=name;
-       }
-       string getName(){
-        return Name;
-       }
-       void setAge(int age){
-        Age=age;
-       }
-       int getAge(){
-        return Age;
-       }
-
-      
-       
-
-
-
-
-
+   void seTitle(string aTitle){
+    title=aTitle;
+   }
+   string getTitle(){
+    return title;
+   }
+   void setDirector(string aDirector){
+    director=aDirector;
+   }
+   string getDirector(){
+    return director;
+   }
+   void setRating(int aRating){
+    rating=aRating;
+   }
+   int getRating(){
+    return rating;
+    
+   }
 };
 int main(){
-    employee emp1;
-    emp1.setName("raju");
-    cout<<emp1.getName();
-
+    employee emp1("jaagd","krishna",13);
+    cout<<emp1.getTitle();
 
     return 0;
-
 }
-
